@@ -1,0 +1,104 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #000;
+}
+ul
+{
+    position: relative;
+    display: flex;
+
+}
+ul li
+{
+    position: relative;
+    list-style: none;
+}
+ul li a{
+    position: relative;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 30px;
+    border-radius: 50%;
+    color: #e2e2e2;
+    box-shadow:inset -1px -1px 2px rgba(0,0,0,0.2),
+    2px 2px 5px rgba(0,0,0,0.2) ;
+}
+ul li a .fa
+{
+    color:#fff;
+    position: relative;
+    z-index:1;
+}
+ul li a:hover
+{
+   transition-delay: 0,0.5s,0.5s;
+   top: -42px;
+   transform: translateY(42px);
+   z-index:10;
+}
+ul li a::before
+{
+   content:'';
+   position: absolute;
+   top: 10px;
+   left: 10px;
+   right: 10px;
+   bottom:10px;
+   border-radius: 50%;
+   border: 2px solid rgba(0,0,0,0.1);
+}
+ul li:nth-child(1) a::before
+{
+    background: #1da1f2;
+}
+ul li:nth-child(2) a::before
+{
+    background: #25d366;
+}
+ul li:nth-child(3) a::before
+{
+    background: #f10000;
+}
+ul li:nth-child(4) a::before
+{
+    background: #1877f2;
+}
+ul li:nth-child(5) a::before
+{
+    background: linear-gradient(to bottom,#4c68d7,#d33ac6,#d33ac6,#d33ac6,#e7ff0fe8);   
+}
+.hide
+{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top:50%;
+    background:linear-gradient(rgba(30, 25, 90),rgb(23, 27, 245),rgba(77, 255, 0,0.8),rgba(245,34,23,0.7));
+    z-index: 1;
+    filter: blur(5px);
+}
+.card
+{
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    top:50%;
+    z-index: 1;
+    background:rgba(255,255,255,0.5); 
+}
